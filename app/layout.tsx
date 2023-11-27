@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/app/components/header'
+import Navbar from '@/app/components/navbar'
+import Sidebar from '@/app/components/sidebar'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -17,7 +19,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Header />
+        <div className='drawer'>
+          <input id='my-drawer' type='checkbox' className='drawer-toggle' />
+          <div className='drawer-content'>
+            <Navbar />
+            {children}
+          </div>
+          <Sidebar />
+        </div>
       </body>
     </html>
   )
