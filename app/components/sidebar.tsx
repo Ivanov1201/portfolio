@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div className='drawer-side'>
+    <div className='drawer-side z-30'>
       <label
         htmlFor='my-drawer'
         aria-label='close sidebar'

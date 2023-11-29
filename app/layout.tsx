@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Vitaliy Ivanov · Full Stack Web Developer',
   description:
-    'Full-Stack(Front-End, Back-End) web developer proficient in Javascript/Typescript, PHP and Typescript',
+    'Full-Stack(Front-End, Back-End) web developer proficient in Javascript/Typescript, PHP and Python',
 }
 
 export default function RootLayout({

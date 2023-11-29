@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
-import MoonIcon from '@/app/assets/moon'
-import SunIcon from '@/app/assets/sun'
+import MoonIcon from '@/app/assets/icons/moon'
+import SunIcon from '@/app/assets/icons/sun'
 
 enum Theme {
   Light = 'light',
