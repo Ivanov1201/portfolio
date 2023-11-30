@@ -1,7 +1,7 @@
 'use client'
 import Navbar from '@/app/_components/navbar'
 import Sidebar from '@/app/_components/sidebar'
-import { usePageCheck } from '@/app/hooks'
+import { usePageCheck } from '@/app/_hooks/use-page-check'
 
 export default function RootTemplate({
   children,
