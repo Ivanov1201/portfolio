@@ -19,8 +19,7 @@ export default function ThemeSwitch() {
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
     const currentTheme: Theme =
-      storedTheme && (storedTheme as Theme) in Theme
-        ? (storedTheme as Theme)
+      storedTheme ? (storedTheme as Theme)
         : prefersDarkMode
           ? Theme.Dark
           : Theme.Light
@@ -28,7 +27,9 @@ export default function ThemeSwitch() {
   })
 
   const toggleTheme = () => {
-    setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light)
+    const _theme: Theme = theme === Theme.Light ? Theme.Dark : Theme.Light
+    window.localStorage.setItem('theme', _theme)
+    setTheme(_theme)
   }
 
   useEffect(() => {
