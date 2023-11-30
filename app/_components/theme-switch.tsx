@@ -18,11 +18,11 @@ export default function ThemeSwitch() {
       typeof window !== 'undefined' &&
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
-    const currentTheme: Theme =
-      storedTheme ? (storedTheme as Theme)
-        : prefersDarkMode
-          ? Theme.Dark
-          : Theme.Light
+    const currentTheme: Theme = storedTheme
+      ? (storedTheme as Theme)
+      : prefersDarkMode
+        ? Theme.Dark
+        : Theme.Light
     return currentTheme
   })
 

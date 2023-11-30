@@ -29,7 +29,9 @@ export default function Home() {
           <p className='py-6'>
             I am a full-stack web developer located in Ukraine.
           </p>
-          <Link href='/projects' className='btn btn-primary' >Explore projects</Link>
+          <Link href='/projects' className='btn btn-primary'>
+            Explore projects
+          </Link>
         </div>
       </div>
     </div>
