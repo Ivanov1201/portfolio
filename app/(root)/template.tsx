@@ -3,10 +3,7 @@ import React from 'react'
 import Navbar from '@/app/_components/navbar'
 import Sidebar from '@/app/_components/sidebar'
 import { usePageCheck } from '@/app/_hooks/use-page-check'
-import {
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 export default function RootTemplate({
   children,
