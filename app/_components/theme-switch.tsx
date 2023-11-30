@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
-import MoonIcon from '@/app/assets/icons/moon'
-import SunIcon from '@/app/assets/icons/sun'
+import MoonIcon from '../_assets/icons/moon'
+import SunIcon from '../_assets/icons/sun'
 
 enum Theme {
   Light = 'light',
@@ -18,17 +18,18 @@ export default function ThemeSwitch() {
       typeof window !== 'undefined' &&
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
-    const currentTheme: Theme =
-      storedTheme && (storedTheme as Theme) in Theme
-        ? (storedTheme as Theme)
-        : prefersDarkMode
-          ? Theme.Dark
-          : Theme.Light
+    const currentTheme: Theme = storedTheme
+      ? (storedTheme as Theme)
+      : prefersDarkMode
+        ? Theme.Dark
+        : Theme.Light
     return currentTheme
   })
 
   const toggleTheme = () => {
-    setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light)
+    const _theme: Theme = theme === Theme.Light ? Theme.Dark : Theme.Light
+    window.localStorage.setItem('theme', _theme)
+    setTheme(_theme)
   }
 
   useEffect(() => {

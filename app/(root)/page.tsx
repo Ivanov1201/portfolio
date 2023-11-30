@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -28,7 +29,9 @@ export default function Home() {
           <p className='py-6'>
             I am a full-stack web developer located in Ukraine.
           </p>
-          <button className='btn btn-primary'>Get Started</button>
+          <Link href='/projects' className='btn btn-primary'>
+            Explore projects
+          </Link>
         </div>
       </div>
     </div>

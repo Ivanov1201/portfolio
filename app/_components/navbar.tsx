@@ -1,4 +1,4 @@
-import { usePageCheck } from '../hooks'
+import { usePageCheck } from '../_hooks/use-page-check'
 import ThemeSwitch from './theme-switch'
 import { IoMenu } from 'react-icons/io5'
 import Logo from './logo'
