@@ -1,4 +1,5 @@
 import Logo from './logo'
+import Link from 'next/link'
 
 export default function Sidebar() {
   return (
@@ -15,7 +16,9 @@ export default function Sidebar() {
         <ul className='menu p-4'>
           <li>
             <details open>
-              <summary>Projects</summary>
+              <summary>
+                <Link href='/projects'>Projects</Link>
+              </summary>
               <ul>
                 <li>
                   <a>Project 1</a>
