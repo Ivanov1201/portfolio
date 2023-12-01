@@ -1,9 +1,39 @@
 'use client'
 import Logo from './logo'
 import Link from 'next/link'
-
 import { routes } from '@/app/constants'
 import { useCurrentPage } from '../_hooks/use-current-page'
+import {
+  FcAbout, // for About
+  FcServices, // for Skills
+  FcIdea, // for Experience
+  FcOpenedFolder, // for Projects
+  FcAdvertising, // for Testimals
+  FcAddressBook, // for Contact
+} from 'react-icons/fc'
+
+const MenuIcon = ({ route }: { route: string }) => {
+  switch (route) {
+    case routes.About: {
+      return <FcAbout size={24} />
+    }
+    case routes.Skills: {
+      return <FcServices size={24} />
+    }
+    case routes.Experience: {
+      return <FcIdea size={24} />
+    }
+    case routes.Projects: {
+      return <FcOpenedFolder size={24} />
+    }
+    case routes.Contact: {
+      return <FcAddressBook size={24} />
+    }
+    default: {
+      return <FcAdvertising size={24} />
+    }
+  }
+}
 
 export default function Sidebar() {
   const currentPage: string = useCurrentPage()
@@ -27,6 +57,7 @@ export default function Sidebar() {
                   href={routes[key]}
                   className={routes[key] === currentPage ? 'active' : ''}
                 >
+                  <MenuIcon route={routes[key]} />
                   {key}
                 </Link>
               </li>
