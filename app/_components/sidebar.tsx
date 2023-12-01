@@ -1,7 +1,12 @@
+'use client'
 import Logo from './logo'
 import Link from 'next/link'
 
+import { routes } from '@/app/constants'
+import { useCurrentPage } from '../_hooks/use-current-page'
+
 export default function Sidebar() {
+  const currentPage: string = useCurrentPage()
   return (
     <div className='drawer-side z-30'>
       <label
@@ -14,30 +19,18 @@ export default function Sidebar() {
           <Logo />
         </div>
         <ul className='menu p-4'>
-          <li>
-            <details open>
-              <summary>
-                <Link href='/projects'>Projects</Link>
-              </summary>
-              <ul>
-                <li>
-                  <a>Project 1</a>
-                </li>
-                <li>
-                  <a>Project 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Skills</a>
-          </li>
-          <li>
-            <a>Experience</a>
-          </li>
-          <li>
-            <a>Contact</a>
-          </li>
+          {Object.keys(routes)
+            .filter((routeKey) => routes[routeKey] !== routes.Home)
+            .map((key) => (
+              <li key={key}>
+                <Link
+                  href={routes[key]}
+                  className={routes[key] === currentPage ? 'active' : ''}
+                >
+                  {key}
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     </div>

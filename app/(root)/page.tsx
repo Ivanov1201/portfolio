@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { routes } from '../constants'
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           <p className='py-6'>
             I am a full-stack web developer located in Ukraine.
           </p>
-          <Link href='/projects' className='btn btn-primary'>
+          <Link href={routes.Projects} className='btn btn-primary'>
             Explore projects
           </Link>
         </div>

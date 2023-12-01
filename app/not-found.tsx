@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Lottie from 'lottie-react'
 import NotFoundAnimation from './_assets/lottie-data/not-found.json'
+import { routes } from './constants'
 
 export default function NotFound() {
   return (
@@ -13,7 +14,7 @@ export default function NotFound() {
           className='h-screen'
         />
         <button className='btn btn-primary absolute bottom-8'>
-          <Link href='/'>Back to Home</Link>
+          <Link href={routes.Home}>Back to Home</Link>
         </button>
       </div>
     </>
