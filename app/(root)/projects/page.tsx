@@ -1,3 +1,5 @@
+import ComingSoon from '@/app/_components/coming-soon'
+
 export default function Projects() {
-  return <div>Projects</div>
+  return <ComingSoon />
 }
