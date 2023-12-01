@@ -23,6 +23,6 @@ export type Project = {
   title: string
   description: string
   live_url?: string
-  source_url?:string
+  source_url?: string
   tags: string[]
 }

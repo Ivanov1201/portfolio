@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "type": "personal",
+    "title": "personal project title",
+    "description": "personal project description",
+    "live_url": "http://localhost:3000/projects",
+    "source_url": "http://localhost:3000/projects",
+    "tags": ["Next", "React", "API"]
+  },
+  {
+    "id": 2,
+    "type": "client",
+    "title": "client project title",
+    "description": "client project description",
+    "live_url": "http://localhost:3000/projects",
+    "source_url": "http://localhost:3000/projects",
+    "tags": ["Next", "React", "API"]
+  }
+]
