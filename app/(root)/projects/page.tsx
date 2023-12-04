@@ -1,5 +1,5 @@
 'use client'
-import useProjects from './useProjects'
+import useProjects from '../../_hooks/use-projects'
 import { Project } from '@/app/constants'
 import Loading from '@/app/_components/loading'
 export default function Projects() {
