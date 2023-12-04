@@ -5,7 +5,6 @@ export default function useProjects() {
   const projectsQuery = useQuery({
     queryKey: ['projects'],
     queryFn: async (): Promise<Project[]> => {
-      console.log('dd')
       const res = await fetch('/data/projects.json')
       if (!res.ok) {
         throw new Error('Network response was not ok')
