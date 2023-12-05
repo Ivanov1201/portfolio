@@ -2,6 +2,7 @@ import { usePageCheck } from '../_hooks/use-page-check'
 import ThemeSwitch from './theme-switch'
 import { IoMenu } from 'react-icons/io5'
 import Logo from './logo'
+import SearchInput from './search-input'
 import { routes } from '../constants'
 
 const searchInputVisiblePages = [routes.Projects]
@@ -28,11 +29,7 @@ export default function Navbar() {
         )}
         {isSearchInputVisible && (
           <div className='flex-1'>
-            <input
-              type='text'
-              placeholder='Type here'
-              className='input w-full max-w-xs'
-            />
+            <SearchInput />
           </div>
         )}
         <div className='flex-none'>
