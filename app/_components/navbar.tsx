@@ -16,10 +16,12 @@ export default function Navbar() {
             <IoMenu />
           </label>
         </div>
-        {isHomePage && (
+        {isHomePage ? (
           <div className='flex-1'>
             <Logo />
           </div>
+        ) : (
+          <div className='flex-1'>search Input</div>
         )}
         <div className='flex-none'>
           <ThemeSwitch />

@@ -20,7 +20,7 @@ export default function RootTemplate({
         <input id='my-drawer' type='checkbox' className='drawer-toggle' />
         <div className='drawer-content'>
           <Navbar />
-          {children}
+          <div className='container mx-auto py-4'>{children}</div>
         </div>
         <Sidebar />
       </div>
