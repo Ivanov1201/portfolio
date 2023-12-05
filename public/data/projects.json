@@ -4,6 +4,7 @@
     "type": "personal",
     "title": "Helloscribe",
     "description": "HelloScribe is a helpful platform that PR and Marketing professionals can use to develop great prose and come up with creative solutions to challenging problems.",
+    "image_url": "/images/projects/helloscribe.png",
     "live_url": "http://localhost:3000/projects",
     "source_url": "http://localhost:3000/projects",
     "tags": ["Next", "React", "API"]
@@ -13,6 +14,7 @@
     "type": "client",
     "title": "client project title",
     "description": "client project description",
+    "image_url": "/images/projects/helloscribe.png",
     "live_url": "http://localhost:3000/projects",
     "source_url": "http://localhost:3000/projects",
     "tags": ["Next", "React", "API"]
@@ -22,6 +24,7 @@
     "type": "client",
     "title": "client project title",
     "description": "client project description",
+    "image_url": "/images/projects/helloscribe.png",
     "live_url": "http://localhost:3000/projects",
     "source_url": "http://localhost:3000/projects",
     "tags": ["Next", "React", "API"]
