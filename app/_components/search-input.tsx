@@ -36,7 +36,7 @@ export default function SearchInput() {
         </svg>
         <input
           name='search'
-          type='search'
+          type='text'
           placeholder='Search…'
           className='input w-full ps-10 input-bordered'
           value={searchTerm}
