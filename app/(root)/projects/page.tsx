@@ -5,14 +5,24 @@ import { Project } from '@/app/constants'
 import Loading from '@/app/_components/loading'
 import ProjectCard from './_components/project-card'
 
-export default function Projects() {
+type SearchParams = {
+  search?: string
+}
+
+type Props = {
+  searchParams: SearchParams
+}
+
+export default function Projects({ searchParams }: Props) {
+  const keyWords = searchParams?.search?.split(' ') ?? []
+
   const {
     projects,
     isFetching,
   }: {
     projects: Project[]
     isFetching: boolean
-  } = useProjects()
+  } = useProjects(keyWords)
 
   if (isFetching) {
     return <Loading />

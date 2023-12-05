@@ -1,4 +1,21 @@
+import { useState } from 'react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+
 export default function SearchInput() {
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      // Navigate to the current page with the search term as a query parameter
+      const searchParam = new URLSearchParams()
+      if (searchTerm) searchParam.set('search', searchTerm)
+      router.push(`${pathname}?${searchParam.toString()}`)
+    }
+  }
+
   return (
     <div className='hidden w-full max-w-sm lg:flex'>
       <div className='relative mx-3 w-full'>
@@ -22,6 +39,9 @@ export default function SearchInput() {
           type='search'
           placeholder='Search…'
           className='input w-full ps-10 input-bordered'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
         ></input>
       </div>
     </div>
