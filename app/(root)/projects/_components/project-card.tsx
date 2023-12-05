@@ -6,12 +6,12 @@ type ProjectCardProps = {
   project: Project
 }
 
-function ProjectTypeBadge({type}: {type: ProjectType}) {
-  switch(type) {
+function ProjectTypeBadge({ type }: { type: ProjectType }) {
+  switch (type) {
     case ProjectType.PERSONAL: {
       return <div className='badge badge-accent'>{type}</div>
     }
-    case ProjectType.CLIENT : {
+    case ProjectType.CLIENT: {
       return <div className='badge badge-primary'>{type}</div>
     }
     case ProjectType.CORPORATE: {
@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className='card-body'>
         <h2 className='card-title'>
           {project?.title}
-          <ProjectTypeBadge type={project?.type}/>
+          <ProjectTypeBadge type={project?.type} />
         </h2>
         <p>{project?.description}</p>
         <div className='card-actions justify-end'>
