@@ -22,6 +22,7 @@ export type Project = {
   type: ProjectType
   title: string
   description: string
+  image_url: string
   live_url?: string
   source_url?: string
   tags: string[]
