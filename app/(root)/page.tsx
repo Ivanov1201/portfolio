@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { routes } from '../constants'
+import { routes } from '../routes'
 
 export default function Home() {
   return (

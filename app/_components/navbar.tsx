@@ -3,7 +3,7 @@ import ThemeSwitch from './theme-switch'
 import { IoMenu } from 'react-icons/io5'
 import Logo from './logo'
 import SearchInput from './search-input'
-import { routes } from '../constants'
+import { routes } from '../routes'
 
 const searchInputVisiblePages = [routes.Projects]
 

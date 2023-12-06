@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Lottie from 'lottie-react'
 import NotFoundAnimation from './_assets/lottie-data/not-found.json'
-import { routes } from './constants'
+import { routes } from './routes'
 
 export default function NotFound() {
   return (

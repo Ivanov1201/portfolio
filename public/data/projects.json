@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "type": "personal",
+    "type": "client",
     "title": "Helloscribe",
     "description": "HelloScribe is a helpful platform that PR and Marketing professionals can use to develop great prose and come up with creative solutions to challenging problems.",
     "image_url": "/images/projects/helloscribe.png",

@@ -1,14 +1,18 @@
 import { useQuery } from '@tanstack/react-query'
-import { Project } from '@/app/constants'
+import { Project } from '@/app/types'
 
 function filterByKeyword(projects: Project[], keywords: string[]) {
-  console.log(projects, keywords)
   if (!keywords.length) {
     return projects
   }
   return (
     projects.filter((project) =>
-      keywords.some((keyword) => project?.tags.includes(keyword)),
+      keywords.some(
+        (keyword) =>
+          project?.tags.some(
+            (tag) => tag.toLocaleLowerCase() === keyword.toLocaleLowerCase(),
+          ),
+      ),
     ) ?? []
   )
 }

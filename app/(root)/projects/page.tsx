@@ -1,7 +1,7 @@
 'use client'
 
 import useProjects from '../../_hooks/use-projects'
-import { Project } from '@/app/constants'
+import { Project } from '@/app/types'
 import Loading from '@/app/_components/loading'
 import ProjectCard from './_components/project-card'
 
@@ -10,12 +10,13 @@ type SearchParams = {
 }
 
 type Props = {
-  searchParams: SearchParams
-}
+  searchParams: SearchParams;
+};
 
 export default function Projects({ searchParams }: Props) {
-  const keyWords = searchParams?.search?.split(' ') ?? []
 
+  
+  const keyWords: string[] = searchParams?.search?.split(' ') ?? []
   const {
     projects,
     isFetching,

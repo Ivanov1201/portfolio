@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Project, ProjectType } from '@/app/constants'
+import { Project, ProjectType } from '@/app/types'
 
 type ProjectCardProps = {
   project: Project

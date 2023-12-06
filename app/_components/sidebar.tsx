@@ -1,7 +1,7 @@
 'use client'
 import Logo from './logo'
 import Link from 'next/link'
-import { routes } from '@/app/constants'
+import { routes } from '@/app/routes'
 import { useCurrentPage } from '../_hooks/use-current-page'
 import {
   FcAbout, // for About
