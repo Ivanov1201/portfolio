@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+
 import { Project, ProjectType } from '@/app/types'
 
 type ProjectCardProps = {
@@ -32,7 +34,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <figure>
         <Image
           src={project.image_url}
-          className='rounded-lg shadow-2xl'
           alt='Hero'
           width={500}
           height={700}
@@ -52,13 +53,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </div>
           ))}
         </div>
-        <div className='card-actions'>
-          <Link href={project?.live_url ?? ''} className='link link-primary'>
-            Link
-          </Link>
-          <Link href={project?.source_url ?? ''} className='link link-primary'>
-            Source
-          </Link>
+        <div className='card-actions justify-end mt-2'>
+          <a href={project?.live_url ?? ''} className='link link-primary' target='_blank'>
+            <FaExternalLinkAlt title={project?.live_url ?? ''} />
+          </a>
+          <a href={project?.source_url ?? ''} className='link link-info' target='_blank'>
+            <FaGithub title={project?.source_url ?? ''} />
+          </a>
         </div>
       </div>
     </div>
