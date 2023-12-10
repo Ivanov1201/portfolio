@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import { Project, ProjectType } from '@/app/types'
 
@@ -54,10 +54,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className='card-actions justify-end mt-2'>
-          <a href={project?.live_url ?? ''} className='link link-primary' target='_blank'>
+          <a
+            href={project?.live_url ?? ''}
+            className='link link-primary'
+            target='_blank'
+          >
             <FaExternalLinkAlt title={project?.live_url ?? ''} />
           </a>
-          <a href={project?.source_url ?? ''} className='link link-info' target='_blank'>
+          <a
+            href={project?.source_url ?? ''}
+            className='link link-info'
+            target='_blank'
+          >
             <FaGithub title={project?.source_url ?? ''} />
           </a>
         </div>

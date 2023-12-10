@@ -1,4 +1,3 @@
-
 export enum ProjectType {
   PERSONAL = 'personal', // Personal Side Project
   CLIENT = 'client', // Client Contract Project

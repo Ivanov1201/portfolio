@@ -10,12 +10,10 @@ type SearchParams = {
 }
 
 type Props = {
-  searchParams: SearchParams;
-};
+  searchParams: SearchParams
+}
 
 export default function Projects({ searchParams }: Props) {
-
-  
   const keyWords: string[] = searchParams?.search?.split(' ') ?? []
   const {
     projects,
