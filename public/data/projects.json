@@ -7,7 +7,7 @@
     "image_url": "/images/projects/helloscribe.png",
     "live_url": "https://helloscribe.ai/",
     "source_url": "http://localhost:3000/projects",
-    "tags": ["Next", "React", "API"]
+    "tags": ["Next", "React", "API", "Typescript"]
   },
   {
     "id": 2,
