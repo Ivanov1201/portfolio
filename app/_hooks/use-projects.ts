@@ -9,8 +9,8 @@ function filterByKeyword(projects: Project[], keywords: string[]) {
     projects.filter((project) =>
       keywords.some(
         (keyword) =>
-          project?.tags.some(
-            (tag) => tag.toLocaleLowerCase() === keyword.toLocaleLowerCase(),
+          project?.tags.some((tag) =>
+            tag.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()),
           ),
       ),
     ) ?? []

@@ -6,6 +6,7 @@ import { Project, ProjectType } from '@/app/types'
 
 type ProjectCardProps = {
   project: Project
+  keywords: string[]
 }
 
 function ProjectTypeBadge({ type }: { type: ProjectType }) {
@@ -28,7 +29,7 @@ function ProjectTypeBadge({ type }: { type: ProjectType }) {
   }
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, keywords }: ProjectCardProps) {
   return (
     <div className='card bg-base-100 shadow-xl max-w-sm'>
       <figure>
@@ -48,7 +49,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p>{project?.description}</p>
         <div className='card-actions justify-end'>
           {project?.tags?.map((tag) => (
-            <div className='badge badge-ghost' key={tag}>
+            <div
+              className={`badge ${
+                keywords?.some((keyword) =>
+                  tag.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()),
+                )
+                  ? 'badge-accent'
+                  : 'badge-ghost'
+              }`}
+              key={tag}
+            >
               {tag}
             </div>
           ))}

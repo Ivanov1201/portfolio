@@ -31,7 +31,7 @@ export default function Projects({ searchParams }: Props) {
     return (
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 md:gap-8 2xl:gap-24'>
         {projects.map((project) => (
-          <ProjectCard project={project} key={project.id} />
+          <ProjectCard project={project} key={project.id} keywords={keyWords} />
         ))}
       </div>
     )
