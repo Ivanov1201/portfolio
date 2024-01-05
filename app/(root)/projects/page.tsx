@@ -4,6 +4,7 @@ import useProjects from '../../_hooks/use-projects'
 import { Project } from '@/app/types'
 import Loading from '@/app/_components/loading'
 import ProjectCard from './_components/project-card'
+import { useSearchParams } from 'next/navigation'
 
 type SearchParams = {
   search?: string
@@ -13,8 +14,9 @@ type Props = {
   searchParams: SearchParams
 }
 
-export default function Projects({ searchParams }: Props) {
-  const keyWords: string[] = searchParams?.search?.split(' ') ?? []
+export default function Projects() {
+  const searchParams = useSearchParams()
+  const keyWords: string[] = searchParams.get('search')?.split(' ') ?? []
   const {
     projects,
     isFetching,
