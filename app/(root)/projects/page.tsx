@@ -6,14 +6,6 @@ import Loading from '@/app/_components/loading'
 import ProjectCard from './_components/project-card'
 import { useSearchParams } from 'next/navigation'
 
-type SearchParams = {
-  search?: string
-}
-
-type Props = {
-  searchParams: SearchParams
-}
-
 export default function Projects() {
   const searchParams = useSearchParams()
   const keyWords: string[] = searchParams.get('search')?.split(' ') ?? []
