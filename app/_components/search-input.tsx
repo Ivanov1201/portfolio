@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 export default function SearchInput() {
@@ -7,7 +7,9 @@ export default function SearchInput() {
   const searchParam = useSearchParams()
 
   const [searchTerm, setSearchTerm] = useState(searchParam.get('search') ?? '')
-
+  useEffect(() => {
+    setSearchTerm(searchParam.get('search') ?? '')
+  }, [searchParam])
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       const searchParam = new URLSearchParams()
