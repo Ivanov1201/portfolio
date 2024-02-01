@@ -19,8 +19,8 @@ export default function SearchInput() {
   }
 
   return (
-    <div className='hidden w-full max-w-sm lg:flex'>
-      <div className='relative mx-3 w-full'>
+    <div className='w-full max-w-sm lg:flex'>
+      <div className='relative w-full'>
         <svg
           className='pointer-events-none absolute my-4 ms-4 stroke-current opacity-60 text-base-content'
           width='16'
