@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 export default function SearchInput() {
@@ -7,7 +7,9 @@ export default function SearchInput() {
   const searchParam = useSearchParams()
 
   const [searchTerm, setSearchTerm] = useState(searchParam.get('search') ?? '')
-
+  useEffect(() => {
+    setSearchTerm(searchParam.get('search') ?? '')
+  }, [searchParam])
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       const searchParam = new URLSearchParams()
@@ -17,8 +19,8 @@ export default function SearchInput() {
   }
 
   return (
-    <div className='hidden w-full max-w-sm lg:flex'>
-      <div className='relative mx-3 w-full'>
+    <div className='w-full max-w-sm lg:flex'>
+      <div className='relative w-full'>
         <svg
           className='pointer-events-none absolute my-4 ms-4 stroke-current opacity-60 text-base-content'
           width='16'

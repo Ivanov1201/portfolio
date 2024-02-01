@@ -5,14 +5,7 @@ import { Project } from '@/app/types'
 import Loading from '@/app/_components/loading'
 import ProjectCard from './_components/project-card'
 import { useSearchParams } from 'next/navigation'
-
-type SearchParams = {
-  search?: string
-}
-
-type Props = {
-  searchParams: SearchParams
-}
+import NoResultSection from './_components/no-result'
 
 export default function Projects() {
   const searchParams = useSearchParams()
@@ -37,6 +30,7 @@ export default function Projects() {
         ))}
       </div>
     )
+  } else {
+    return <NoResultSection />
   }
-  return null
 }
