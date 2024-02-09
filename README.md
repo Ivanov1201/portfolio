@@ -28,4 +28,4 @@ technical prowess into tailoring its every aspect. ✨ This isn't just a
 collection of projects; it's a window into my thought process, problem-solving
 approach, and dedication to exceeding expectations.
 
-`I wrote this with Bard's help.`
+`I wrote this with Gemini's help.`
